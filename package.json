@@ -1,0 +1,42 @@
+{
+  "name": "beckyadmin",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "scripts": {
+    "client": "cd client && yarn start",
+    "server": "node server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "dev:server": "cd client && yarn build && cd .. && yarn start",
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+   "engines": {
+    "npm": ">=6.0.0",
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+	"cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "html-pdf": "^3.0.1",
+    "http-errors": "~1.6.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+	"node-excel-export": "^1.4.4"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joezhao4865/beckyadmin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joezhao4865/beckyadmin/issues"
+  },
+  "homepage": "https://github.com/joezhao4865/beckyadmin#readme"
+}
