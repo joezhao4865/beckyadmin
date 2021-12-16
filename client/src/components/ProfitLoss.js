@@ -46,7 +46,7 @@ const ProfitLoss = ({
 				body: JSON.stringify({
 					startMonth,
 					endMonth,
-					endDate,
+					//endDate,
 					feeForService,
 					service,
 					evvCharge,
@@ -68,7 +68,7 @@ const ProfitLoss = ({
 					//window.location.assign(file);
 					const link = document.createElement('a');
 					link.href = url;
-					link.setAttribute('download', `profit_and_loss_${startMonth}-${endMonth}_${endDate}.pdf`)
+					link.setAttribute('download', `profit_and_loss_${startMonth}-${endMonth}.pdf`)
 					document.body.appendChild(link);
 					link.click();
 					link.parentNode.removeChild(link);
