@@ -17,7 +17,7 @@ const VisitList = (props) => {
 		props.visits.forEach(v => {
 			//paid += typeof(v.paid_amount) === 'string' ? Number(v.paid_amount) : v.paid_amount
 			paid += +v.paid_amount || 0.00
-			calc += v.calculated_amount
+			calc += +v.calculated_amount
 			//billable += typeof(v.billable_amount) === 'string' ? Number(v.billable_amount) : v.billable_amount
 			billable += +v.billable_amount || 0.00
 		})
@@ -141,7 +141,7 @@ const VisitList = (props) => {
 				</tr>
 				<tr style={{color: 'white'}}>
 					<td>Calculated</td>
-					<td>{calculated.toFixed(2).toString().replaceAll(regexPattern, '$1,')}</td>
+					<td>{calculated}</td>
 				</tr>
 				<tr style={{color: 'white'}}>
 					<td>Billable</td>
